@@ -13,7 +13,7 @@ public class DBconfig {
 
     //database 설정에 관련된 내용
     private String driverClassName = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/diarydb?useSSL=false&useUnicode=true&characterEncoding=utf8";
+    private String url = "jdbc:mysql://localhost:3306/diarydb?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
     private String username = "connectuser";
     private String password = "connect123!@#";
 
