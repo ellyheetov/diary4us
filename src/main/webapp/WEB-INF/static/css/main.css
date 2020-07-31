@@ -28,3 +28,7 @@ footer {
     height: 800px;
     border: 1px solid gray;
 }
+
+#main-nav-ul {
+    list-style-type: none;
+}
