@@ -12,9 +12,12 @@ the web diary for couple
 **BE**
 - macOS Catalina 10.15.5
 - intellij 2019.3.5
-- Java Development Kit 11.0.7
-- Maven 3.6.1
+- Software Development Kit(SDK) 11.0.7
+- Java Development Kit(JDK) 8
 - tomcat 8.5.57 
+- Maven 3.6.1
+- Spring Framework 4.3.5
+- Mysql 8.0.19
 
 **FE**
 
