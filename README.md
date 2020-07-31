@@ -29,4 +29,3 @@ the web diary for couple
 **contributers**
 @[elly](#github.com/ellyheetov)
 @[justinjeong5](#github.com/justinjeong5)
-
