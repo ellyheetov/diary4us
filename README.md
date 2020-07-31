@@ -17,15 +17,18 @@ the web diary for couple
 
 **BE**
 - macOS Catalina 10.15.5
-- intellij 2019.3.5
+- Intellij 2019.3.5
 - Java Development Kit 11.0.7
+- Spring Framework 4.3.5
 - Maven 3.6.1
-- tomcat 8.5.57
+- Tomcat 8.5.57
+- Mysql 8.0.16
+
 **FE**
 - macOS catalina 10.15.6
 - visual studio code 1.47.3
 
 ## contacts
 **contributers**
-@[elly](#github.com/ellyheetov)
-@[justinjeong5](#github.com/justinjeong5)
+@[elly](https://github.com/ellyheetov)
+@[justinjeong5](https://github.com/justinjeong5)
