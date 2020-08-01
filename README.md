@@ -27,6 +27,7 @@ the web diary for couple
 **FE**
 - macOS catalina 10.15.6
 - visual studio code 1.47.3
+- awesome font 5.14.0
 
 ## contacts
 **contributers**
