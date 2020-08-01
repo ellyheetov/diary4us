@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>diary4us</title>
+</head>
+
+<body>
+    <header>
+        <h1>Diary 4 Us <i class="fas fa-book"></i></h1>
+        <h2>우리사이의 다이어리</h2>
+
+    </header>
+    <main>
+        <div id="main-nav">nav
+            <ul id="main-nav-ul">
+                <li>
+                    <a href="./write.html"> <i class="fas fa-pen"></i>다이어리 쓰기</a>
+                </li>
+                <li><i class="fas fa-pen-fancy"></i>모든 다이어리</li>
+                <li><i class="fas fa-cloud-moon"></i>내 기분</li>
+                <li><i class="far fa-calendar-alt"></i>일정관리</li>
+            </ul>
+        </div>
+        <div id="main-main">
+            <div id="new-diary">
+                <div id="diary-header">
+                    <input type="text" placeholder="title" id="diary-title">
+                    <input type="password" placeholder="password" id="diary-pw">
+                </div>
+                <div id="diary-body">
+                    <input type="text" id="diary-content">
+                </div>
+            </div>
+            <input type="submit" value="글쓰기">
+            <button onclick="reverse()">새로고침</button>
+        </div>
+    </main>
+    <footer>
+        @2020 elly-justin
+    </footer>
+    <script src="./static/js/main.js "></script>
+</body>
+
+</html>

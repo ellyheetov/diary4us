@@ -1,0 +1,3 @@
+const reverse = () => {
+    location.reload();
+}
