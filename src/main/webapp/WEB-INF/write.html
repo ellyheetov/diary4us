@@ -26,12 +26,24 @@
                 <li><i class="far fa-calendar-alt"></i>일정관리</li>
             </ul>
         </div>
-        <div id="main-main">main page</div>
+        <div id="main-main">
+            <div id="new-diary">
+                <div id="diary-header">
+                    <input type="text" placeholder="title" id="diary-title">
+                    <input type="password" placeholder="password" id="diary-pw">
+                </div>
+                <div id="diary-body">
+                    <input type="text" id="diary-content">
+                </div>
+            </div>
+            <input type="submit" value="글쓰기">
+            <button onclick="reverse()">새로고침</button>
+        </div>
     </main>
     <footer>
         @2020 elly-justin
     </footer>
-    <script src="./static/js/main.js"></script>
+    <script src="./static/js/main.js "></script>
 </body>
 
 </html>

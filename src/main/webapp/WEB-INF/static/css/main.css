@@ -10,6 +10,10 @@ footer {
     color: grey;
 }
 
+button {
+    float: right;
+}
+
 
 /* https://yoonnamee.tistory.com/155 
     position relation과 flaot에 관한 블로그 */
@@ -18,17 +22,45 @@ footer {
     position: relative;
     float: left;
     width: 19%;
-    height: 800px;
+    height: 600px;
     border: 1px solid gray;
 }
 
 #main-main {
     float: right;
     width: 79%;
-    height: 800px;
+    height: 600px;
     border: 1px solid gray;
+}
+
+#main-main>input {
+    float: right;
 }
 
 #main-nav-ul {
     list-style-type: none;
+}
+
+#new-diary {
+    height: 480px;
+    border: 2px solid gray;
+}
+
+#diary-header {
+    border: 3px solid green;
+}
+
+#diary-title {
+    margin-left: 4px;
+    width: 70%;
+}
+
+#diary-pw {
+    width: 25%;
+}
+
+#diary-content {
+    margin-left: 1px;
+    width: 98%;
+    height: 440px;
 }
