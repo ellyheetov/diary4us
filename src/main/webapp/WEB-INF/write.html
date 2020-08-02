@@ -16,7 +16,7 @@
 
     </header>
     <main>
-        <div id="main-nav">nav
+        <div id="main-nav">diary 4 us
             <ul id="main-nav-ul">
                 <li>
                     <a href="./write.html"> <i class="fas fa-pen"></i>다이어리 쓰기</a>
@@ -27,17 +27,21 @@
             </ul>
         </div>
         <div id="main-main">
+            <div>반갑습니다. 일기를 쓰세요.</div>
             <div id="new-diary">
-                <div id="diary-header">
-                    <input type="text" placeholder="title" id="diary-title">
-                    <input type="password" placeholder="password" id="diary-pw">
-                </div>
-                <div id="diary-body">
-                    <input type="text" id="diary-content">
-                </div>
+                <!-- BE destination -->
+                <form action="#" method="post">
+                    <div id="diary-header">
+                        <input type="text" placeholder="title" name="diaryTitle" id="diary-title">
+                        <input type="password" placeholder="password" name="diaryPw" id="diary-pw">
+                    </div>
+                    <div id="diary-body">
+                        <textarea name="diaryContent" id="diary-content"></textarea>
+                    </div>
+                </form>
             </div>
-            <input type="submit" value="글쓰기">
-            <button onclick="reverse()">새로고침</button>
+            <input class="btn-diary" type="submit" value="글쓰기">
+            <button class="btn-diary" onclick="refresh()">새로고침</button>
         </div>
     </main>
     <footer>
