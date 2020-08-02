@@ -2,16 +2,32 @@ header,
 main,
 footer {
     font-family: "NotoSerifWeb", "Noto Serif CJK Kr", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    min-width: 800px;
+    max-width: 1100px;
 }
 
 footer {
+    padding: 10px;
+    clear: both;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.7em;
     color: grey;
+    max-width: 100%;
 }
 
-button {
+main {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn-diary {
     float: right;
+    margin-right: 10px;
+}
+
+#main-main>input {
+    margin-right: 4%;
 }
 
 
@@ -21,14 +37,15 @@ button {
 #main-nav {
     position: relative;
     float: left;
-    width: 19%;
+    width: 20%;
     height: 600px;
     border: 1px solid gray;
 }
 
 #main-main {
     float: right;
-    width: 79%;
+    width: 78%;
+    min-width: 600px;
     height: 600px;
     border: 1px solid gray;
 }
@@ -42,25 +59,29 @@ button {
 }
 
 #new-diary {
-    height: 480px;
-    border: 2px solid gray;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
 }
 
-#diary-header {
-    border: 3px solid green;
+#diary-header,
+#diary-body {
+    margin: 1%;
 }
 
 #diary-title {
-    margin-left: 4px;
     width: 70%;
 }
 
 #diary-pw {
-    width: 25%;
+    width: 24%;
 }
 
 #diary-content {
-    margin-left: 1px;
-    width: 98%;
+    margin: 1%;
+    width: 94%;
     height: 440px;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
