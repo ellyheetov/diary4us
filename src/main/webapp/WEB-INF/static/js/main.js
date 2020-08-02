@@ -1,3 +1,3 @@
-const reverse = () => {
+const refresh = () => {
     location.reload();
 }
