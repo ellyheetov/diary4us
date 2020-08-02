@@ -8,7 +8,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class DayaSourceTest {
+public class ConnectionTest {
 
     public static void main(String[] args){
         ApplicationContext ac = new AnnotationConfigApplicationContext(DBconfig.class);
