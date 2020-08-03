@@ -2,12 +2,14 @@ package org.diary4us.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan("org.diary4us.dao")
 @EnableTransactionManagement
 public class DBconfig {
 
@@ -15,7 +17,7 @@ public class DBconfig {
     private String driverClassName = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://localhost:3306/diarydb?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
     private String username = "connectuser";
-    private String password = "connect123!@#";
+    private String dbpassword = "connect123!@#";
 
     @Bean
     public DataSource dataSource(){
@@ -23,7 +25,7 @@ public class DBconfig {
         dataSource.setDriverClassName(driverClassName);
         dataSource.setUrl(url);
         dataSource.setUsername(username);
-        dataSource.setPassword(password);
+        dataSource.setPassword(dbpassword);
         return dataSource;
     }
 }
