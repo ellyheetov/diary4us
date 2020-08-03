@@ -6,6 +6,7 @@ the web diary for couple
 **working on**
 - board for diary
 - creation, modification, read to board
+- calendar
 
 **will be**
 - sign up
