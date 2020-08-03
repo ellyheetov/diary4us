@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>diary4us</title>
+    <script src="./includeHTML.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Diary 4 Us <i class="fas fa-book"></i></h1>
+        <h2>우리사이의 다이어리</h2>
+
+    </header>
+    <main>
+        <!-- navigator -->
+        <header include-html="./nav.html"></header>
+
+        <div id="main-main">
+            <div id="calendar"></div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer include-html="./footer.html"></footer>
+    <script src="./static/js/main.js"></script>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
