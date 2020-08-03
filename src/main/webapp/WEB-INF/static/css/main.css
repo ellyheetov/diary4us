@@ -39,7 +39,6 @@ main {
     float: left;
     width: 20%;
     height: 600px;
-    border: 1px solid gray;
 }
 
 #main-main {
@@ -47,7 +46,6 @@ main {
     width: 78%;
     min-width: 600px;
     height: 600px;
-    border: 1px solid gray;
 }
 
 #main-main>input {
