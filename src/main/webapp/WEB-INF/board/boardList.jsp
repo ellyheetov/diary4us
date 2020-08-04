@@ -11,10 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
     <title>diary4us</title>
-    <script src="../includeHTML.js"></script>
+    <script src="/includeHTML.js"></script>
+
 </head>
 
 <body>
@@ -24,22 +25,21 @@
 </header>
 <main>
     <!-- navigator -->
-    <header include-html="../nav.html"></header>
+    <header include-html="/nav.html"></header>
 
     <div id="main-main">
         <div>반갑습니다. 일기를 읽어보아요.</div>
-        <button class="btn-diary" onclick="refresh()">새로고침</button>
 
         <!-- board area -->
 
         <!-- 게시판 -->
-        <table style="height: 100%; width: 800px;padding:  3px; text-align:center; border:1px solid #dddddd">
+        <table id="board-table" >
             <thead>
             <tr>
-                <th style="background-color: #eeeeee; text-align: center;">번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">제목</th>
-                <th style="background-color: #eeeeee; text-align: center;">작성일</th>
-                <th style="background-color: #eeeeee; text-align: center;">내용</th>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>내용</th>
             </tr>
             </thead>
             <tbody>
@@ -54,7 +54,7 @@
                     <%=list.get(i).getBoardId()%>
                 </td>
                 <td style="text-align: left; padding-left: 10px">
-                    <a href="./boardView.jsp?boardId=<%=list.get(i).getBoardId()%>">
+                    <a href="/board/boardView.jsp?boardId=<%=list.get(i).getBoardId()%>">
                         <%=list.get(i).getTitle()%>
                     </a>
                 </td>
@@ -80,8 +80,8 @@
 
 </main>
 <!-- footer -->
-<footer include-html="../footer.html"></footer>
-<script src="../static/js/main.js"></script>
+<footer include-html="/footer.html"></footer>
+<script src="/static/js/main.js"></script>
 <script>
     includeHTML();
 </script>
