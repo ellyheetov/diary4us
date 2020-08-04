@@ -28,11 +28,11 @@
     <header include-html="/nav.html"></header>
 
     <div id="main-main">
-        <div>반갑습니다. 일기를 읽어보아요.</div>
+        <div>반갑습니다. 기분이 어떠신가요.</div>
 
         <!-- board area -->
 
-        <!-- 게시판 -->
+        <!-- 기분 목록 -->
         <table id="board-table" >
             <thead>
             <tr>

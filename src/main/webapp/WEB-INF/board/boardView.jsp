@@ -11,10 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>diary4us</title>
-    <script src="../includeHTML.js"></script>
+    <script src="/includeHTML.js"></script>
+    <link rel="stylesheet" href="/static/css/main.css">
 </head>
 
 <body>
@@ -24,11 +25,10 @@
 </header>
 <main>
     <!-- navigator -->
-    <header include-html="../nav.html"></header>
+    <header include-html="/nav.html"></header>
 
     <div id="main-main">
         <div>반갑습니다. 일기를 읽어보아요.</div>
-        <button class="btn-diary" onclick="refresh()">새로고침</button>
 
         <!-- board area -->
 
@@ -52,7 +52,7 @@
         <!-- 게시판 -->
         <div>
             <div>
-                <table style="text-align: center; width: 700px; height: 400px; border: 1px solid #dddddd">
+                <table id="board-table-view">
                     <thead>
                     <tr>
                         <th colspan="3" style="background-color: #eeeeee; text-align: center; ">글 보기</th>
