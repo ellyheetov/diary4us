@@ -6,16 +6,16 @@ public class BoardInform {
     private Integer boardId;
     private String title;
     private String content;
+    private String password;
     private Date regdate;
-
 
     public Integer getBoardId() {
         return boardId;
     }
+
     public void setBoardId(Integer boardId) {
         this.boardId = boardId;
     }
-
     public String getTitle() {
         return title;
     }
@@ -38,6 +38,14 @@ public class BoardInform {
 
     public void setRegdate(Date regdate) {
         this.regdate = regdate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
