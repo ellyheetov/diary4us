@@ -12,15 +12,14 @@ import java.time.LocalDateTime;
 
 
 @Controller
-@ComponentScan(basePackages = {"org.diary4us.controller"})
 public class DiaryController {
 
     @Autowired
-    private DiaryService diaryService;
+    DiaryService diaryService;
 
     @GetMapping(path = "/writeDiaryForm")
     public String writeForm() {
-        return "index.html";
+        return "index";
     }
 
     @PostMapping(path = "/writeDiary")
@@ -30,8 +29,8 @@ public class DiaryController {
         @RequestParam(name = "diaryPw", required = true) String diaryPw,
         @RequestParam(name = "diaryContent", required = true) String diaryContent)*/
 
-        diaryService.addDiary(boardInform);
+//        diaryService.addDiary(boardInform);
 
-        return "/board/boardList.jsp";
+        return "/board/boardList";
     }
 }

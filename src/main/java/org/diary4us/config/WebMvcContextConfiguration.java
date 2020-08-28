@@ -27,14 +27,14 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         System.out.println("addViewControllers가 호출됩니다. ");
-        registry.addViewController("/").setViewName("main");
+        registry.addViewController("/").setViewName("index");
     }
 
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/");
-//        resolver.setSuffix(".jsp");
+        resolver.setSuffix(".jsp");
         return resolver;
     }
 }
