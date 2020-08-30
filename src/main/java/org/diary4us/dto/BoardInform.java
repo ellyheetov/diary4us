@@ -1,19 +1,19 @@
 package org.diary4us.dto;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 public class BoardInform {
-    private Integer boardId;
+    private Long boardId;
     private String title;
     private String content;
-    private String password;
     private Date regdate;
 
-    public Integer getBoardId() {
+    public Long getBoardId() {
         return boardId;
     }
 
-    public void setBoardId(Integer boardId) {
+    public void setBoardId(Long boardId) {
         this.boardId = boardId;
     }
     public String getTitle() {
@@ -38,14 +38,6 @@ public class BoardInform {
 
     public void setRegdate(Date regdate) {
         this.regdate = regdate;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Override

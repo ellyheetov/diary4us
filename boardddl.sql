@@ -1,9 +1,8 @@
 CREATE TABLE `board` (
-  `board_id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '게시글 번호',
+  `board_id` INT(10) NOT NULL AUTO_INCREMENT COMMENT '게시글 번호',
    `title` VARCHAR(255) NOT NULL COMMENT '제목',
   `content` TEXT DEFAULT NULL COMMENT 'board content',
   `regdate` DATETIME NULL DEFAULT NULL COMMENT '등록일',
-  `password` INT(20) NOT NULL,
   PRIMARY KEY (`board_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   INSERT INTO board (board_id, title, content, regdate) VALUE (1,'첫번쨰 글','첫번째 글입니다','2017-12-21 12:16:14');
