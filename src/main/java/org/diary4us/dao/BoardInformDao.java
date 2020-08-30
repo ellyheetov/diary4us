@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -26,31 +27,43 @@ public class BoardInformDao {
 
     public BoardInformDao(DataSource dataSource) {
         this.jdbc = new NamedParameterJdbcTemplate(dataSource);
-        this.insertAction = new SimpleJdbcInsert(dataSource).withTableName("board");
+        this.insertAction = new SimpleJdbcInsert(dataSource)
+                .withTableName("board")
+                .usingGeneratedKeyColumns("board_id");
     }
 
-    public List<BoardInform> selectAll(){
-        return jdbc.query(SELECT_ALL, Collections.emptyMap(), rowMapper);
+    public List<BoardInform> selectAll(int start, int limit) {
+        Map<String, Integer> params = new HashMap<String, Integer>();
+        params.put("start", start);
+        params.put("limit", limit);
+        return jdbc.query(SELECT_PAGING, Collections.emptyMap(), rowMapper);
     }
-    public int insert(BoardInform boardInform){
+
+    public Long insert(BoardInform boardInform) {
         SqlParameterSource params = new BeanPropertySqlParameterSource(boardInform);
-        return insertAction.execute(params);
+        return insertAction.executeAndReturnKey(params).longValue();
     }
-    public int update(BoardInform boardInform){
+
+    public int update(BoardInform boardInform) {
         SqlParameterSource params = new BeanPropertySqlParameterSource(boardInform);
         return jdbc.update(UPDATE, params);
     }
-    public int deleteById(Integer id){
-        Map<String,?> params = Collections.singletonMap("boardId",id);
-        return jdbc.update(DELETE_BY_ID,params);
+
+    public int deleteById(Long id) {
+        Map<String, ?> params = Collections.singletonMap("boardId", id);
+        return jdbc.update(DELETE_BY_ID, params);
     }
-    public BoardInform selectById(Integer id){
-        try{
-            Map<String, ?> params = Collections.singletonMap("boardId",id);
-            return jdbc.queryForObject(SELECT_BY_ID,params,rowMapper);
-        }catch(EmptyResultDataAccessException e){
+
+    public BoardInform selectById(Long id) {
+        try {
+            Map<String, ?> params = Collections.singletonMap("boardId", id);
+            return jdbc.queryForObject(SELECT_BY_ID, params, rowMapper);
+        } catch (EmptyResultDataAccessException e) {
             return null;
         }
+    }
+    public int selectCount(){
+        return jdbc.queryForObject(SELECT_COUNT, Collections.<String,Object>emptyMap(),Integer.class);
     }
 }
 
