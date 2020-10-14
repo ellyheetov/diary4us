@@ -6,6 +6,8 @@ import org.diary4us.dto.BoardInform;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.sql.Date;
+
 public class BoardJDBCTest {
 
     public static void main(String[] args) {
@@ -14,35 +16,22 @@ public class BoardJDBCTest {
         BoardInformDao boardInformDao = ac.getBean(BoardInformDao.class);
 
         BoardInform boardInform = new BoardInform();
-        boardInform.setBoardId(1);
+        boardInform.setBoardId(Long.valueOf("4"));
         boardInform.setTitle("Hello");
-        boardInform.setContent("First Submit");
+        boardInform.setContent("Second Submit");
 
         //insert
-        int insertionCount = boardInformDao.insert(boardInform);
-        System.out.println(insertionCount + " insertion completed");
+        Long insertionID = boardInformDao.insert(boardInform);
+        System.out.println(insertionID + " insertion completed");
 
         //update
-        boardInform.setContent("Second Submit");
+        boardInform.setContent("third Submit");
         int updateCount = boardInformDao.update(boardInform);
         System.out.println(updateCount + " update completed");
 
-        //delete
-        int deleteCount = boardInformDao.deleteById(1);
+//        delete
+        int deleteCount = boardInformDao.deleteById(Long.valueOf("6"));
         System.out.println(deleteCount + " delete completed");
 
     }
 }
-
-/*
- Role resultRole = roleDao.selectById(101);
-        System.out.println(resultRole);
-
-                int deleteCount = roleDao.deleteById(101);
-                System.out.println(deleteCount + " 건 삭제하였습니다.");
-
-                Role resultRole2 = roleDao.selectById(101);
-                System.out.println(resultRole2);
-                }
-
- */
