@@ -4,14 +4,17 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan("org.diary4us.dao")
 @EnableTransactionManagement
-public class DBconfig {
+public class DBconfig implements TransactionManagementConfigurer {
 
     //database 설정에 관련된 내용
     private String driverClassName = "com.mysql.jdbc.Driver";
@@ -27,5 +30,15 @@ public class DBconfig {
         dataSource.setUsername(username);
         dataSource.setPassword(dbpassword);
         return dataSource;
+    }
+    @Override
+    public PlatformTransactionManager annotationDrivenTransactionManager() {
+        return transactionManager();
+    }
+    // 위 메서드에서 트랜잭션을 처리할 객체를 반환한다.
+    // 이 객체는 아래처럼 PlatformTransactionManager를 반환한다.
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dataSource());
     }
 }
