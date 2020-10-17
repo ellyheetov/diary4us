@@ -46,7 +46,7 @@
             <%
                 ApplicationContext ac = new AnnotationConfigApplicationContext(DBconfig.class);
                 BoardInformDao boardInformDao = ac.getBean(BoardInformDao.class);
-                ArrayList<BoardInform> list = (ArrayList<BoardInform>) boardInformDao.selectAll();
+                ArrayList<BoardInform> list = (ArrayList<BoardInform>) boardInformDao.selectSome();
                 for (int i = 0; i < list.size(); i++) {
             %>
             <tr>

@@ -32,11 +32,11 @@ public class BoardInformDao {
                 .usingGeneratedKeyColumns("board_id");
     }
 
-    public List<BoardInform> selectAll(int start, int limit) {
+    public List<BoardInform> selectSome(int start, int limit) {
         Map<String, Integer> params = new HashMap<String, Integer>();
         params.put("start", start);
         params.put("limit", limit);
-        return jdbc.query(SELECT_PAGING, Collections.emptyMap(), rowMapper);
+        return jdbc.query(SELECT_SOME, params, rowMapper);
     }
 
     public Long insert(BoardInform boardInform) {

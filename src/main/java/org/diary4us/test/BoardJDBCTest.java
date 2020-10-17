@@ -6,8 +6,6 @@ import org.diary4us.dto.BoardInform;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.sql.Date;
-
 public class BoardJDBCTest {
 
     public static void main(String[] args) {
@@ -33,5 +31,6 @@ public class BoardJDBCTest {
         int deleteCount = boardInformDao.deleteById(Long.valueOf("6"));
         System.out.println(deleteCount + " delete completed");
 
+        System.out.println(boardInformDao.selectSome(0,5));
     }
 }

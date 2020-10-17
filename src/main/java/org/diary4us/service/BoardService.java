@@ -9,9 +9,10 @@ import java.util.List;
 public interface BoardService {
 
     public static final Integer LIMIT = 5;
-    public List<BoardInform> getBoards(Integer start);
-    public int deleteBoard(Long id);
-    public BoardInform addBoard(BoardInform boardInform);
-    public int getCount();
-
+    BoardInform getBoard(Long id);
+    List<BoardInform> getBoards(Integer start);
+    int deleteBoard(Long id);
+    BoardInform insertBoard(BoardInform boardInform);
+    BoardInform updateBoard(BoardInform boardInform);
+    int getCount();
 }
