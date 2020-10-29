@@ -1,5 +1,5 @@
-<%@ page import="org.diary4us.dao.BoardInformDao" %>
-<%@ page import="org.diary4us.dto.BoardInform" %>
+<%@ page import="org.diary4us.dao.DiaryBoardDao" %>
+<%@ page import="org.diary4us.dto.DiaryBoard" %>
 <%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page import="org.springframework.context.annotation.AnnotationConfigApplicationContext" %>
 <%@ page import="org.diary4us.config.DBconfig" %>
@@ -35,7 +35,7 @@
         <!-- 게시판 -->
         <%
             ApplicationContext ac = new AnnotationConfigApplicationContext(DBconfig.class);
-            BoardInformDao boardInformDao = ac.getBean(BoardInformDao.class);
+            DiaryBoardDao diaryBoardDao = ac.getBean(DiaryBoardDao.class);
             int boardId = 0;
             if (request.getParameter("boardId") != null) {
                 boardId = Integer.parseInt(request.getParameter("boardId"));
@@ -47,7 +47,7 @@
                 script.println("location.href = './boardList.jsp'");
                 script.println("</script>");
             }
-            BoardInform boardInform = boardInformDao.selectById(boardId);
+            DiaryBoard diaryBoard = diaryBoardDao.selectById(boardId);
         %>
         <!-- 게시판 -->
         <div>
@@ -62,25 +62,25 @@
                     <tr>
                         <td style="width: 20%;"> 글 번호</td>
                         <td colspan="2">
-                            <%= boardInform.getBoardId() %>
+                            <%= diaryBoard.getBoardId() %>
                         </td>
                     </tr>
                     <tr>
                         <td>제목</td>
                         <td colspan="2">
-                            <%= boardInform.getTitle() %>
+                            <%= diaryBoard.getTitle() %>
                         </td>
                     </tr>
                     <tr>
                         <td>작성일</td>
                         <td colspan="2">
-                            <%= boardInform.getRegdate()%>
+                            <%= diaryBoard.getRegdate()%>
                         </td>
                     </tr>
                     <tr>
                         <td>내용</td>
                         <td colspan="2" style="height: 270px; text-align: left;">
-                            <%= boardInform.getContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") %>
+                            <%= diaryBoard.getContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") %>
                         </td>
                     </tr>
                     </tbody>

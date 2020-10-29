@@ -1,5 +1,5 @@
-<%@ page import="org.diary4us.dao.BoardInformDao" %>
-<%@ page import="org.diary4us.dto.BoardInform" %>
+<%@ page import="org.diary4us.dao.DiaryBoardDao" %>
+<%@ page import="org.diary4us.dto.DiaryBoard" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page import="org.springframework.context.annotation.AnnotationConfigApplicationContext" %>
@@ -45,8 +45,8 @@
             <tbody>
             <%
                 ApplicationContext ac = new AnnotationConfigApplicationContext(DBconfig.class);
-                BoardInformDao boardInformDao = ac.getBean(BoardInformDao.class);
-                ArrayList<BoardInform> list = (ArrayList<BoardInform>) boardInformDao.selectSome();
+                DiaryBoardDao diaryBoardDao = ac.getBean(DiaryBoardDao.class);
+                ArrayList<DiaryBoard> list = (ArrayList<DiaryBoard>) diaryBoardDao.selectSome();
                 for (int i = 0; i < list.size(); i++) {
             %>
             <tr>
