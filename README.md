@@ -10,6 +10,8 @@ the web diary for couple
 
 **will be**
 - sign up
+- d-day
+- money diary
 - tracking each other based on google map
 - board using dynamic video
 - chatting 
