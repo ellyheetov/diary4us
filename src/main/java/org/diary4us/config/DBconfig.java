@@ -12,12 +12,17 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan("org.diary4us.dao")
+@ComponentScan("org.diary4us.web")
 @EnableTransactionManagement
 public class DBconfig implements TransactionManagementConfigurer {
 
     //database 설정에 관련된 내용
     private String driverClassName = "com.mysql.cj.jdbc.Driver";
+    /*
+    private String url = "jdbc:mysql://awsdiary4usdb.c9f79hwobvs4.us-east-2.rds.amazonaws.com:3306/diarydb?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
+    private String username = "admin";
+    private String dbpassword = "admin123";
+    */
     private String url = "jdbc:mysql://localhost:3306/diarydb?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
     private String username = "connectuser";
     private String dbpassword = "connect123!@#";
