@@ -1,8 +1,8 @@
-package org.diary4us.service.impl;
+package org.diary4us.web.diary.service.impl;
 
-import org.diary4us.dao.DiaryBoardDao;
-import org.diary4us.dto.DiaryBoard;
-import org.diary4us.service.DiaryBoardService;
+import org.diary4us.web.diary.dao.DiaryBoardDao;
+import org.diary4us.web.diary.dto.DiaryBoard;
+import org.diary4us.web.diary.service.DiaryBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

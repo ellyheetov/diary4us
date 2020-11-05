@@ -1,4 +1,4 @@
-package org.diary4us.dao;
+package org.diary4us.web.diary.dao;
 
 public class DiaryBoardDaoSqls {
     public static final String SELECT_ALL = "SELECT id, diary_title, diary_content, create_date, modify_date FROM diaryBoard ORDER BY id";

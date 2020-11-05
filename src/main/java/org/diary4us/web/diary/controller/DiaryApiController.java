@@ -1,15 +1,15 @@
-package org.diary4us.controller;
+package org.diary4us.web.diary.controller;
 
 import io.swagger.annotations.ApiOperation;
-import org.diary4us.dto.DiaryBoard;
-import org.diary4us.service.DiaryBoardService;
+import org.diary4us.web.diary.dto.DiaryBoard;
+import org.diary4us.web.diary.service.DiaryBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
 @RestController
-@RequestMapping(path="/board")
+@RequestMapping(path="/diary")
 public class DiaryApiController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class DiaryApiController {
     }
 
     @ApiOperation(value = "전체 게시글 조회")
-    @GetMapping(value="/boards")
+    @GetMapping(value="/diarys")
     @ResponseBody
     public Map<String, Object> selectSome(@RequestParam(name="start",required = false, defaultValue = "0")int start){
         List<DiaryBoard> list = diaryBoardService.getBoards(start);

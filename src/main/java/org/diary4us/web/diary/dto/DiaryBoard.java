@@ -1,4 +1,4 @@
-package org.diary4us.dto;
+package org.diary4us.web.diary.dto;
 
 import java.util.Date;
 

@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableWebMvc
 @EnableSwagger2
-@ComponentScan(basePackages = {"org.diary4us.controller"})
-public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
+@ComponentScan(basePackages = {"org.diary4us.web"})
+public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/assets/**")
@@ -31,7 +31,6 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
-    // default servlet handler를 사용하게 합니다.
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
@@ -40,13 +39,13 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         System.out.println("addViewControllers가 호출됩니다. ");
-        registry.addViewController("/").setViewName("index");
+//        registry.addViewController("/").setViewName("index");
     }
 
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/");
+        resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         return resolver;
     }

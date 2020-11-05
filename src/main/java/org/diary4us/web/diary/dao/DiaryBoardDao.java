@@ -1,6 +1,6 @@
-package org.diary4us.dao;
+package org.diary4us.web.diary.dao;
 
-import org.diary4us.dto.DiaryBoard;
+import org.diary4us.web.diary.dto.DiaryBoard;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.diary4us.dao.DiaryBoardDaoSqls.*;
+import static org.diary4us.web.diary.dao.DiaryBoardDaoSqls.*;
 
 @Repository
 public class DiaryBoardDao {

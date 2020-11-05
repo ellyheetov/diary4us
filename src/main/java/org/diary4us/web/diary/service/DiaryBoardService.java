@@ -1,6 +1,6 @@
-package org.diary4us.service;
+package org.diary4us.web.diary.service;
 
-import org.diary4us.dto.DiaryBoard;
+import org.diary4us.web.diary.dto.DiaryBoard;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

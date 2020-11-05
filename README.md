@@ -4,7 +4,7 @@ the web diary for couple
 
 ## list of features
 **working on**
-- board for diary
+- board for diary 
 - creation, modification, read to board
 - calendar
 
@@ -22,10 +22,11 @@ the web diary for couple
 - macOS Catalina 10.15.5
 - Intellij 2019.3.5
 - Java Development Kit 11.0.7
-- Spring Framework 4.3.5
+- Spring Framework 5.2.2
 - Maven 3.6.1
-- Tomcat 8.5.57
-- Mysql 8.0.16
+- Tomcat 9.0.39
+- Mysql 8.0.20
+- Swagger 2.9.2
 
 **FE**
 - macOS catalina 10.15.6
