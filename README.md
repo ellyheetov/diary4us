@@ -5,12 +5,14 @@ the web diary for couple
 ## list of features
 **working on**
 - board for diary 
+- sign up
 - creation, modification, read to board
 - calendar
 
 **will be**
-- sign up
 - d-day
+- advertisement
+- weather information
 - money diary
 - tracking each other based on google map
 - board using dynamic video
